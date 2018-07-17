@@ -10,9 +10,6 @@ class MyApp < Sinatra::Base
   post "/" do
     @name = params[:user]
     @fortune = get_fortune
-    if @fortune == "you will prosper"
-    @fortune = get_fortune
-    end
     return erb :results
   end
   
