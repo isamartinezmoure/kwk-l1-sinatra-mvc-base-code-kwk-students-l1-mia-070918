@@ -1,4 +1,5 @@
 require 'bundler'
+require './models/model'
 Bundler.require
 
 class MyApp < Sinatra::Base
@@ -6,7 +7,9 @@ class MyApp < Sinatra::Base
    return erb :index
   end 
   
-  get "/" do
+  post "/" do
+    @name = params[:user]
+    @fortune = get_fortune
     return erb :results
   end
   
