@@ -8,6 +8,7 @@
     <h3>Hey <%=@name%>, <%=@fortune%></h3>
     
     <%if @fortune == "you will prosper"%>
+    <% @fortune = get_fortune %>
     <%= "Hey #{@name}, #{@fortune}"%>
     <%else%>
     <p>Congratulations!</p>
