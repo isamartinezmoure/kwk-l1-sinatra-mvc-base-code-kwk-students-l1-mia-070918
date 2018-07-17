@@ -10,6 +10,7 @@ class MyApp < Sinatra::Base
   post "/" do
     @name = params[:user]
     @fortune = get_fortune
+    @new_fortune = get_fortune
     return erb :results
   end
   
